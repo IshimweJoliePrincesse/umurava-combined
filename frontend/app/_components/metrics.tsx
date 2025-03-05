@@ -7,23 +7,23 @@ export default function MetricsSection() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 relative z-10">
           <div className="text-center text-white">
-            <div className="text-4xl md:text-5xl font-bold mb-1">1</div>
-            <div className="text-sm md:text-base opacity-90">Year</div>
+            <div className="text-4xl font-bold mb-1">1</div>
+            <div className="text-sm opacity-90">Year</div>
           </div>
 
           <div className="text-center text-white">
-            <div className="text-4xl md:text-5xl font-bold mb-1">500+</div>
-            <div className="text-sm md:text-base opacity-90">Challenges Completed</div>
+            <div className="text-4xl font-bold mb-1">500+</div>
+            <div className="text-sm opacity-90">Challenges Completed</div>
           </div>
 
           <div className="text-center text-white">
-            <div className="text-4xl md:text-5xl font-bold mb-1">10K+</div>
-            <div className="text-sm md:text-base opacity-90">Users</div>
+            <div className="text-4xl font-bold mb-1">10K+</div>
+            <div className="text-sm opacity-90">Users</div>
           </div>
 
           <div className="text-center text-white">
-            <div className="text-4xl md:text-5xl font-bold mb-1">6+</div>
-            <div className="text-sm md:text-base opacity-90">Countries</div>
+            <div className="text-4xl font-bold mb-1">6+</div>
+            <div className="text-sm opacity-90">Countries</div>
           </div>
         </div>
       </div>
