@@ -34,16 +34,26 @@ const Header = (): JSX.Element => {
     <header className="flex py-4 px-4 sm:px-10 font-[sans-serif] min-h-[70px] tracking-wide relative z-50 bg-white">
       <div className="flex flex-wrap items-center justify-between gap-5 w-full">
         {/* Logo */}
-        <Link href="/" className="max-sm:hidden">
+        {/* <Link href="/" className="max-sm:hidden">
           <div className="w-36 ml-20">
             <Image src="/images/logo.png" alt="logo" width={144} height={144} />
           </div>
-        </Link>
+        </Link> */}
 
-        <Link href="/" className="hidden max-sm:block">
+        {/* <Link href="/" className="hidden max-sm:block">
           <div className="w-9 ml-32">
             <Image src="/images/logo.png" alt="logo" width={36} height={36} />
           </div>
+        </Link> */}
+
+        <Link href="/" className="relative w-40 sm:w-60 h-14">
+          <Image
+            src="/images/blue.svg"
+            alt="idee8 Logo"
+            fill
+            className="object-contain"
+            priority
+          />
         </Link>
 
         {/* Mobile Menu */}

@@ -9,6 +9,7 @@ import Footer from "./_components/footer";
 import TestimonialsSection from "./_components/testimonials";
 import GettingStarted from "./_components/GettingStarted";
 import CareerSection from "./_components/CareerSection";
+import SaasCarousel from "./_components/Projects";
 export default function Home() {
   return (
     <>
@@ -17,6 +18,7 @@ export default function Home() {
       <About />
       <MetricsSection />
       <SkillsChallenges />
+      <SaasCarousel />
       <ChallengePage />
       <SkillsBenefits />
       <TestimonialsSection />

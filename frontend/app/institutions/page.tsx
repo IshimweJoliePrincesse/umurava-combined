@@ -1,20 +1,20 @@
 import Footer from "./footer";
 import Header from "./Header";
-import HeroSection from "./Hero";
-import KeyOfferings from "./Benefits";
-import PartnersSetion from "./Partners";
-import SkillsIntegration from "./SkillsIntegration";
-import CTASection from "./CTAButton";
+import Intro from "./Intro";
+import Offerings from "./Offerings";
+import PartnersMarquee from "./ClientsMarquee";
+import IntegrationSection from "./Integration";
+import CTASection from "./banner";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <HeroSection />
-      <KeyOfferings />
+      <Intro />
+      <Offerings />
 
-      <PartnersSetion />
-      <SkillsIntegration />
+      <PartnersMarquee />
+      <IntegrationSection />
       <CTASection />
       <Footer />
     </>

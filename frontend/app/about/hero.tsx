@@ -1,6 +1,8 @@
-import Image from "next/image";
-
+"use client";
+import { useState } from "react";
+import { Play } from "lucide-react";
 export default function StorySection() {
+  const [isPlaying, setIsPlaying] = useState(false);
   return (
     <div className="container mx-auto px-4 py-12 md:py-16">
       <div className="grid gap-8 md:grid-cols-2 items-center">
@@ -27,14 +29,42 @@ export default function StorySection() {
         </div>
 
         {/* Right Column - Image */}
-        <div className="relative aspect-video rounded-3xl overflow-hidden bg-[#2B71F0] p-4 mx-auto md:mx-0 w-full max-w-[350px] h-[350px]">
-          <Image
-            src="/images/video.png"
-            alt="Umurava Skills Challenges"
-            fill
-            className="object-cover rounded-2xl"
-            priority
-          />
+        <div className="relative aspect-video bg-[#1D4ED8] rounded-[8px] overflow-hidden">
+          {!isPlaying ? (
+            <button
+              onClick={() => setIsPlaying(true)}
+              className="absolute inset-0 w-full h-full flex items-center justify-center group"
+              aria-label="Play video"
+            >
+              {/* Thumbnail */}
+              {/* <img
+                src=""
+                alt=""
+                className="absolute inset-0 w-full h-full object-cover"
+              /> */}
+
+              {/* Play Button */}
+              <div className="relative z-10 w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-lg transform transition-transform group-hover:scale-110">
+                <Play className="w-8 h-8 text-[#1D4ED8] ml-1" />
+              </div>
+
+              {/* Video Title Overlay */}
+              <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                <h3 className="text-white text-2xl font-bold tracking-wider absolute bottom-8">
+                  UMURAVA SKILLS CHALLENGES
+                </h3>
+              </div>
+            </button>
+          ) : (
+            <video
+              className="w-full h-full"
+              controls
+              autoPlay
+              src="/your-video.mp4"
+            >
+              Your browser does not support the video tag.
+            </video>
+          )}
         </div>
       </div>
     </div>

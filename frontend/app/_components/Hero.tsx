@@ -20,19 +20,66 @@ const HeroSection: React.FC = () => {
         </button>
       </div>
 
-      {/* Positioning TalentCounter over the image */}
-      <div className="mt-[200px] rounded-full border-white mr-[0px] absolute top-1/2 transform -translate-y-1/2 left-1/2 -translate-x-1/2 bg-white px-10">
-        <TalentCounter />
-      </div>
+      <div className="relative w-full max-w-md lg:max-w-5xl">
+        <div className="flex flex-col md:flex-row gap-4">
+          <div className="relative flex-1 aspect-[3/4] bg-blue-500 rounded-[2rem] overflow-hidden ">
+            <div className="absolute top-0 left-0 w-32 h-32">
+              <Image
+                src="/images/Ellipse1.png"
+                alt="Decorative element"
+                width={200}
+                height={100}
+                className="object contain"
+              />
+            </div>
+            <div className="relative z-10 w-full h-full">
+              <Image
+                src={`/images/people.png`}
+                alt="Team members"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
 
-      {/* Image Column */}
-      <div className="image-column w-1/2">
-        <Image
-          src="/images/homepage.png"
-          alt="home_page_photo"
-          width={570}
-          height={443}
-        />
+          <div className="absolute -top-7 left-1/2 -translate-x-1/2 z-50 bg-white rounded-full shadow-2xl w-16 h-16">
+            <Image
+              src="/images/new.png"
+              alt="Reactions"
+              fill
+              priority
+              className="object-contain"
+            />
+          </div>
+
+          <div className="relative flex-1 aspect-[3/4] bg-blue-500 rounded-[2rem] overflow-hidden z-10">
+            <div className="absolute top-0 right-0 w-36 h-36">
+              <Image
+                src="/images/Ellipse4.png"
+                alt="Decorative element"
+                width={200}
+                height={100}
+                className="object-contain"
+              />
+            </div>
+
+            <div className="relative z-10 w-full h-full">
+              <Image
+                src={`/images/man.png`}
+                alt="Person with Laptop"
+                fill
+                className="object-cover"
+              />
+
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-500 via-transparent opacity-50"></div>
+            </div>
+          </div>
+        </div>
+        <div className="absolute bottom-3 -left-5 z-50 -translate-x-1/2 animate-bounce flex items-center">
+          <div className="bg-white rounded-full px-4 py-2 shadow-lg flex items-center">
+            <TalentCounter />
+          </div>
+        </div>
       </div>
     </section>
   );
